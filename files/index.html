@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
+   <title>Image Slider Testing</title>
+</head>
+<body onload="slider ()">
+   <div class="banner">
+      
+      <div class="slider">
+         <img src="../images/01.jpg" class="sliderImg">
+      </div>
+
+         <div class="menu-bar">
+         <div class="container content">
+            <h1 class="logo">XYZ Consult</h1>
+            <div class="nav-menu">
+               <nav>
+                  <ul>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="#">Services</a></li>
+                     <li><a href="#">Blog</a></li>
+                     <li><a href="#">Contact</a></li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+      
+
+
+      <div class="main-content">
+         <h2>Welcome to our Company</h2>
+         <h1>BEST DEVELOPERS COMPANY</h1>
+         <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Incidunt eos perferendis sequi repudiandae, deserunt consectetur officia laboriosam aperiam in consequatur.</P>
+         <div class="btn">Read More</div>
+      </div>
+   </div>
+   
+   <script>
+
+var slideImg = document.querySelector ('.slideImg');
+
+var images = new Array (
+         "images/02.jpg",
+         "images/03.jpg",
+         "images/04.jpg",
+         "images/05.jpg");
+
+      var len = images.length;
+      var i = 0;
+
+      function slider () {
+         if (i > len-1){
+            i = 0;
+         }
+         slideImg.src = images[i];
+         i++;
+
+         setTimeout('slider()',3000);
+      }
+   </script>
+</body>
+</html>
